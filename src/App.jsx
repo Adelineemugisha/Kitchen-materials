@@ -13,6 +13,7 @@ const ALL_ITEMS_CATEGORY = {
   intro:
     "The overflow shelf — small, useful, beautiful things that don't fit neatly into a category.",
   items: ALL_ITEMS,
+  hidden: true,
 };
 
 const TRUST = [
@@ -61,13 +62,16 @@ export default function App() {
             </div>
           </div>
 
-          {[...CATEGORIES, ALL_ITEMS_CATEGORY].map((category, i) => (
-            <CategorySection
-              key={category.id}
-              category={category}
-              tone={i % 2 === 1 ? "sand" : "cream"}
-            />
-          ))}
+          {/* hidden until photography exists */}
+          {[...CATEGORIES, ALL_ITEMS_CATEGORY]
+            .filter((category) => !category.hidden)
+            .map((category, i) => (
+              <CategorySection
+                key={category.id}
+                category={category}
+                tone={i % 2 === 1 ? "sand" : "cream"}
+              />
+            ))}
         </div>
 
         <Promotions />

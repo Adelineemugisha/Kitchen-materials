@@ -40,64 +40,80 @@ export const HERO_BLENDERS = [
   },
 ];
 
-export const BLENDERS = withImages("blender", [
+export const BLENDERS = [
   {
+    id: "blender-1",
     name: "Aurora High-Speed Blender",
     variation: "Model 1 · 2 L · 1400 W",
     price: 349,
+    image: `${IMAGE_BASE}/bigblender2.png`,
     description:
       "Variable speed dial with a pulse setting and a 2 L Tritan jug. Handles ice, nut butters and hot soups.",
   },
   {
+    id: "blender-2",
     name: "Everyday Personal Blender",
     variation: "Model 2 · 600 ml",
     price: 89,
+    image: `${IMAGE_BASE}/bigblender3.png`,
     description:
       "Blend-and-go cup with a leak-proof lid. Ideal for one smoothie at a time.",
   },
   {
+    id: "blender-3",
     name: "Glass Jug Blender",
     variation: "Model 3 · 1.5 L",
     price: 129,
+    image: `${IMAGE_BASE}/bigblender4.png`,
     description:
       "Heat-resistant glass jug that takes hot liquids without clouding. Six blades, two speeds.",
   },
   {
+    id: "blender-4",
     name: "Vacuum Blender",
     variation: "Model 4 · 1.8 L",
     price: 249,
+    image: `${IMAGE_BASE}/bigblender5.png`,
     description:
       "Pumps the air out before blending, so juices keep their colour and vitamins for longer.",
   },
   {
+    id: "blender-5",
     name: "Immersion Hand Blender",
     variation: "Model 5 · 700 W",
     price: 79,
+    image: `${IMAGE_BASE}/smallblender2.png`,
     description:
       "Stainless shaft and whisk attachment. Blends straight in the pot — no extra washing up.",
   },
   {
+    id: "blender-6",
     name: "Smoothie Blender",
     variation: "Model 6 · 1 L",
     price: 109,
+    image: `${IMAGE_BASE}/smallblender3.png`,
     description:
       "Slim footprint, generous 1 L jug and a dedicated smoothie programme for silky texture.",
   },
   {
+    id: "blender-7",
     name: "Professional Bar Blender",
     variation: "Model 7 · 2.4 L",
     price: 429,
+    image: `${IMAGE_BASE}/smallblender4.png`,
     description:
       "Café-grade motor with a sound-dampening base. Crushes a full jug of ice in under ten seconds.",
   },
   {
+    id: "blender-8",
     name: "Quiet Blender",
     variation: "Model 8 · 1.8 L",
     price: 299,
+    image: `${IMAGE_BASE}/smallblender5.png`,
     description:
       "Enclosed sound chamber keeps morning smoothies under a whisper. Programmed presets for soup, salsa and frozen dessert.",
   },
-]);
+];
 
 /* ------------------------------------------------------------------ */
 /*  Categories                                                        */
@@ -360,6 +376,7 @@ export const CATEGORIES = [
     prefix: "oven",
     title: "Ovens",
     intro: "Even heat, precise control, and finishes that suit the room.",
+    hidden: true,
     items: withImages("oven", [
       {
         name: "Built-in Convection Oven",
@@ -396,6 +413,7 @@ export const CATEGORIES = [
     prefix: "storage",
     title: "Glass Storage",
     intro: "Stackable, see-through, and built for leftovers that deserve better.",
+    hidden: true,
     items: withImages("storage", [
       {
         name: "Glass Storage Set",
@@ -432,6 +450,7 @@ export const CATEGORIES = [
     prefix: "crepemaker",
     title: "Crepe Makers",
     intro: "Thin, even, golden — Sunday mornings sorted.",
+    hidden: true,
     items: withImages("crepemaker", [
       {
         name: "Classic Crepe Pan",
@@ -468,6 +487,7 @@ export const CATEGORIES = [
     prefix: "pan",
     title: "Pans",
     intro: "Heavy bases, honest handles, no hot spots.",
+    hidden: true,
     items: withImages("pan", [
       {
         name: "Tri-Ply Frying Pan",
@@ -504,6 +524,7 @@ export const CATEGORIES = [
     prefix: "cup",
     title: "Cups in Different Shapes",
     intro: "From espresso to chai — a shape for every ritual.",
+    hidden: true,
     items: withImages("cup", [
       {
         name: "Ribbed Espresso Cups",
@@ -540,6 +561,7 @@ export const CATEGORIES = [
     prefix: "coffeemaker",
     title: "Coffee Makers",
     intro: "Filter, espresso or pour-over — brewed the way you like it.",
+    hidden: true,
     items: withImages("coffeemaker", [
       {
         name: "Drip Coffee Maker",
@@ -576,6 +598,7 @@ export const CATEGORIES = [
     prefix: "pressurecooker",
     title: "Pressure Cookers",
     intro: "Beans, stews and stock in a fraction of the time.",
+    hidden: true,
     items: withImages("pressurecooker", [
       {
         name: "6 L Electric Pressure Cooker",
@@ -612,6 +635,7 @@ export const CATEGORIES = [
     prefix: "table",
     title: "Standard Tables",
     intro: "Solid timber and clean lines — the anchor of the room.",
+    hidden: true,
     items: withImages("table", [
       {
         name: "Oak Dining Table",

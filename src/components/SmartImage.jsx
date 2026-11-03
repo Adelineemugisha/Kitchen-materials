@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+const warned = new Set();
+
 /**
  * Renders the product image, and if the file is missing shows a warm
  * typographic tile instead of a broken image. Drop your PNGs into
@@ -9,6 +11,10 @@ export default function SmartImage({ src, alt, className = "", imgClassName = ""
   const [failed, setFailed] = useState(false);
 
   if (failed) {
+    if (!warned.has(src)) {
+      warned.add(src);
+      console.warn(`[images] missing ${src}`);
+    }
     return (
       <div
         className={`flex items-center justify-center bg-gradient-to-br from-sand via-cream to-sand-dark ${className}`}
